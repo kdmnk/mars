@@ -1,8 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Variables
-@import 'variables';
 
+//custom variables
+$theme-colors: (
+  "primary": #E2B231,
+  "secondary": #252A51
+);
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
