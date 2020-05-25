@@ -2,8 +2,10 @@
     #content {
         margin-left: 300px;
     }
+    #user {
+        width: 100% !important;
+    }
 }
-
 #sidebar{
     padding: 0;
     height: 100%;
