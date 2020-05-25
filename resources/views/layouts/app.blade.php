@@ -22,35 +22,18 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body style="overflow-x: hidden">
     <div class="row">
-        <div id="sidebar" class="col d-none d-lg-block fixed-top shadow">
-            <div id="logo" class="bg-secondary white-text">
-                <img class="float-lg-left" style="height:70px" src="{{ env('LOGO','') }}">
-                <div id="logotext">
-                    <span id="title" class="text-white">{{ config('app.name', 'Urán') }}</span>
-                    <sup id="version" class="text-white noselect">{{ env('APP_VERSION', '') }}</sup>
-                </div>
-                <div class="text-white noselect text-center">Eötvös József Collegium</div>
-            </div>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Disabled</a>
-                </li>
-            </ul>
-        </div>
-        <div id="content" class="" style="padding:0; width:100%">@include('layouts.navbar')
+        @include('layouts.sidebar')
+        <div id="content" class="" style="padding:0; width:100%">
+            <header>
+                @include('layouts.navbar')
+            </header>
             <main class="py-4">
                 @yield('content')
             </main>
