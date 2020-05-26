@@ -1,17 +1,13 @@
-<nav class="navbar navbar-expand-lg bg-secondary justify-content-between">
+<nav class="navbar navbar-expand-lg bg-secondary justify-content-between align-items-start">
     <div class="row px-3">
         <button class="navbar-toggler text-white align-bottom" type="button" data-toggle="collapse"
             data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false"
             aria-label="Toggle navigation">
             <i class="material-icons">menu</i>
         </button>
-        <div class="col pr-0 text-white align-bottom d-none d-lg-block"><i class="material-icons">keyboard_arrow_right</i></div>
-        <div class="col p-0 text-white align-bottom">Hello</div>
+        <div class="col pr-0 text-white d-none d-lg-block mt-2"><i class="material-icons" style="font-size: 1.5rem">keyboard_arrow_right</i></div>
+        <div class="col p-0 text-white mt-2">Hello</div>
     </div>
-    <a class="navbar-brand d-lg-none text-white" href="#">
-        <img src="{{ env('LOGO','') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-        {{ config('app.name', 'Urán') }}
-    </a>
     <ul id="user" class="navbar-nav d-flex justify-content-end">
         @guest
         <li class="nav-item mx-3">
@@ -41,6 +37,10 @@
     <div class="collapse navbar-collapse" id="navbarMobile">
         <ul class="navbar-nav d-lg-none">
             @include('layouts.navigators.main')
+            <a class="navbar-brand text-white mx-auto" href="#">
+                <img src="{{ env('LOGO','') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+                {{ config('app.name', 'Urán') }}
+            </a>
         </ul>
     </div>
 </nav>

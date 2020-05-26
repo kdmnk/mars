@@ -5,7 +5,21 @@
     #user {
         width: 100% !important;
     }
+    .menu-item{
+        color: #484848;
+    }
+    .menu-item:hover{
+        background-color: #ECEFF1;
+        color: #484848;
+    }
 }
+@media only screen and (max-width: 992px){
+    .menu-item, .menu-item:hover{
+        color: #ffffff;
+    }
+}
+
+
 #sidebar{
     padding: 0;
     height: 100%;
@@ -27,4 +41,11 @@
 #version{
     height:15px;
     vertical-align: text-top;
+}
+
+#navbarMobile+.navbar-nav+.nav-item+.nav-link {
+    color: #484848;
+}
+#sidebar+.nav+.nav-item+.nav-link {
+    color: #ffffff;
 }
