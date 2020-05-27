@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap-formhelpers.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/tabulator_bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/site.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/site.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/cookieconsent.min.css') }}" >
     
     <!-- Fonts -->
@@ -29,10 +29,10 @@
 
 <body style="overflow-x: hidden">
     <div class="row">
-        @include('layouts.sidebar')
+        @include('layouts.navigators.sidebar')
         <div id="content" class="" style="padding:0; width:100%">
             <header>
-                @include('layouts.navbar')
+                @include('layouts.navigators.navbar')
             </header>
             <main class="py-4">
                 @yield('content')

@@ -1,108 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{{ env('LOGO','') }}">
+    <title>{{ config('app.name', 'Urán') }}</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+</head>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">@lang('general.login')</a>
-
+<body style="overflow-x: hidden">
+    <div class="row">
+        <div style="padding:0; width:100%">
+            <header>
+                <nav class="navbar navbar-expand bg-secondary justify-content-end">
+                    <ul class="navbar-nav w-100 justify-content-end d-flex">
+                        @auth
+                            <li class="nav-item mx-3"><a class="nav-link text-white" href="{{ url('/home') }}">@lang('general.login')</a></li>
+                        @else
                         @if (Route::has('register'))
-                            <a class="mobile-break" href="{{ route('register') }}">@lang('general.register')</a>
-                            <a class="pc-break" href="{{ route('register') }}">@lang('general.register') @lang('general.register_collegist')</a>
-                            <a class="pc-break" href="{{ route('register.guest') }}">@lang('general.register') @lang('general.register_guest')</a>
+                            <li class="nav-item mx-3"><a class="nav-link text-white" href="{{ route('register') }}">@lang('general.register')</a></li>
                         @endif
-                    @endauth
-
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Urán 2.0
-                </div>
-
-                <div class="links">
-                    <a href="">
-                    @lang('main.better')</a><br class="mobile-break"/>
-                    <a href="">
-                    @lang('main.faster')</a><br class="mobile-break"/>
-                    <a href="">
-                    @lang('main.brilliant')</a><br class="mobile-break"/>
-                    <a href="">
-                    @lang('main.essential')</a><br class="mobile-break"/>
-                    <a href="">
-                    @lang('main.modern')</a><br class="mobile-break"/>
-                    <a href="https://github.com/luksan47/mars">
-                    @lang('main.open')</a><br class="mobile-break"/>
-                </div>
+                        <li class="nav-item ml-auto mx-3"><a class="nav-link text-white" href="{{ route('login') }}">@lang('general.login')</a></li>
+                        @endauth
+                    </ul>
+                </nav>
+            </header>
+            <div style="min-height:80%;min-height:80vh;display:flex;align-items:center;">
+                <main class="container">
+                    <div class="row text-center">
+                        <div class="col-md text-md-right">
+                            <img class="" style="height:130px" src="{{ env('LOGO','') }}">
+                        </div>
+                        <div class="col-md text-md-left" style="font-family: 'Exo 2', sans-serif;">
+                            <div class="py-4">
+                                <span id="title" class="noselect text-muted" style="font-size: 80px;">{{ config('app.name', 'Urán') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row" >
+                        <a href="#" class="col-lg-2 btn btn-dark">
+                        @lang('main.better')</a>
+                        <a href="#" class="col-lg-2 btn btn-dark">
+                        @lang('main.faster')</a>
+                        <a href="#" class="col-lg-2 btn btn-dark">
+                        @lang('main.brilliant')</a>
+                        <a href="#" class="col-lg-2 btn btn-dark">
+                        @lang('main.essential')</a>
+                        <a href="#" class="col-lg-2 btn btn-dark">
+                        @lang('main.modern')</a>
+                        <a href="https://github.com/luksan47/mars" class="col-lg-2 btn btn-dark">
+                        @lang('main.open')</a>
+                    </div>
+                </main>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
