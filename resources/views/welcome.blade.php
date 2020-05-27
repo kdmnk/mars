@@ -8,6 +8,7 @@
     <title>{{ config('app.name', 'Urán') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     
     <!-- Fonts -->
@@ -40,7 +41,7 @@
                         </div>
                         <div class="col-md text-md-left" style="font-family: 'Exo 2', sans-serif;">
                             <div class="py-4">
-                                <span id="title" class="noselect text-muted" style="font-size: 80px;">{{ config('app.name', 'Urán') }}</span>
+                                <span class="noselect text-muted" style="font-size: 80px;letter-spacing: 3px;">{{ config('app.name', 'Urán') }}</span>
                             </div>
                         </div>
                     </div>

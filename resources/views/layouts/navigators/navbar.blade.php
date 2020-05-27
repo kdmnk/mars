@@ -7,8 +7,8 @@
             <i class="material-icons">menu</i>
         </button>
         <!-- page title -->
-        <div class="col pr-0 text-white d-none d-lg-block mt-2"><i class="material-icons" style="font-size: 1.5rem">keyboard_arrow_right</i></div>
-        <div class="col p-0 text-white mt-2">@yield('title')</div>
+        <div class="col pr-0 text-white d-none d-lg-block mt-2 noselect"><i class="material-icons" style="font-size: 1.5rem">keyboard_arrow_right</i></div>
+        <div class="col p-0 text-white mt-2 noselect">@yield('title')</div>
     </div>
     <ul id="user" class="navbar-nav d-flex justify-content-end">
         <!-- login/register -->
