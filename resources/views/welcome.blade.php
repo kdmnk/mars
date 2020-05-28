@@ -37,7 +37,7 @@
                 <main class="container">
                     <div class="row text-center">
                         <div class="col-md text-md-right">
-                            <img class="" style="height:130px" src="{{ env('LOGO','') }}">
+                            <img class="noselect" style="height:130px" src="{{ env('LOGO','') }}">
                         </div>
                         <div class="col-md text-md-left" style="font-family: 'Exo 2', sans-serif;">
                             <div class="py-4">

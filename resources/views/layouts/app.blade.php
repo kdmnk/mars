@@ -13,8 +13,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-formhelpers.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-formhelpers.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/tabulator_bootstrap4.min.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/site.css') }}"> --}}

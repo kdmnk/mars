@@ -1,46 +1,34 @@
 @extends('layouts.app')
 
-@section('content')
+@section('title')
+@lang('print.print')
+@endsection
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">@lang('print.print')</div>
-                <div class="card-body">
-                    @if (session('print.status'))
-                        <div class="alert alert-success">
-                            {{ session('print.status') }}
-                        </div>
-                    @endif
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
-                    <div class="alert alert-info">
-                        <strong>@lang('general.note'):</strong>
-                        @lang('print.available_money'): {{ Auth::user()->printAccount->balance }} HUF
-                    </div>
-                    @include("print.print")
-                    @include("print.free")
-                    @include("print.modify")
-                    @include("print.free-admin")
-                    @include("print.send")
-                    @include("print.history")
-                </div>
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card my-3">
+            <div class="card-body">
+                <h2 class="card-title">@lang('print.print_document')</h2>
+                @include("print.print")
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                @include("print.free")
+                @include("print.modify")
+                @include("print.free-admin")
+                @include("print.send")
+                @include("print.history")
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 
 <!-- Datepicker script -->
 <script type="text/javascript">
-	$(function(){
+    $(function(){
 		$('.date').datepicker({
 			format: 'yyyy-mm-dd',
 			autoclose: true,
